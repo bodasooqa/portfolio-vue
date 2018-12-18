@@ -1,0 +1,58 @@
+<template>
+    <section class="bg-overlay padding" id="project">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-12">
+                    <div class="row">
+                        <div class="col-xl-9 col-lg-12">
+                            <figure class="projects-picture laptop">
+                                <img src="../assets/img/laptop.png" alt="Laptop">
+                            </figure>
+                        </div>
+                        <div class="col-md-3">
+                            <figure class="projects-picture phone">
+                                <img src="../assets/img/phone.png" alt="Phone">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12">
+                    <div class="projects-details">
+                        <!--<div class="projects-badge">
+                          Featured
+                        </div>-->
+                        <h2 class="projects-title">Адаптивность</h2>
+                        <p class="projects-description">
+                            Адаптивный веб-дизайн — дизайн веб-страниц, обеспечивающий правильное отображение сайта на различных устройствах, подключённых к интернету и динамически подстраивающийся под заданные размеры окна браузера.
+                        </p>
+                        <p class="projects-description">
+                            В своих работах я учитываю адаптивность, как обязательное состовляющее и полностью подстраиваю сайт под все устройства.
+                        </p>
+                        <div class="projects-cta">
+                            <a href="http://terracorp.ru" class="btn btn-warning" target="_blank">
+                                Смотреть пример
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</template>
+
+<script>
+    export default {
+        name: "Project"
+    }
+</script>
+
+<style lang="scss" scoped>
+    #project {
+        background-image: url(../assets/img/projects.jpeg);
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
