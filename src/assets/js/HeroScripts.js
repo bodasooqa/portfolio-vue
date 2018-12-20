@@ -34,7 +34,7 @@ export default class HeroScripts {
     scrollSetting() {
         $(window).scroll(function () {
             const scroll = $(window).scrollTop();
-            $('.hero').css('background-position', `0 -${scroll / 100 * 2}rem`);
+            $('.hero').css('background-position', `50% -${scroll / 100 * 2}rem`);
         });
     }
 }
