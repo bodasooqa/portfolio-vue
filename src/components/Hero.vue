@@ -38,5 +38,6 @@
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+    height: 100vh;
 }
 </style>

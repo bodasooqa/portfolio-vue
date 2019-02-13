@@ -9,7 +9,6 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const tech = new Tech(req.body);
-    tech.isComplete = false;
     await tech.save();
     res.json({state: 'success'});
 });

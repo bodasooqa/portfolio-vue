@@ -33,6 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link smooth-link" href="#blog">Блог</a>
                     </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link smooth-link" to="love-me">Love Me</router-link>
+                    </li>
                 </ul>
                 <form class="form-inline">
                     <a href="#contact" class="btn smooth-link align-middle btn-primary">Связаться</a>

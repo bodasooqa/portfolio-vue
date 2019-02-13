@@ -2,17 +2,19 @@ const express = require('express');
 // const session = require('express-session');
 // const FileStore = require('session-file-store')(session);
 // const passport = require('passport');
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const path = require('path');
 const morgan = require('morgan');
 const nodemailer = require('nodemailer');
+var cors = require('cors')
 
 require('dotenv').config();
 
 const app = express();
-// mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/portfolio', { useNewUrlParser: true })
-//     .then(() => console.log('[OK] DB is connected'))
-//     .catch(err => console.error(err));
+app.use(cors())
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/portfolio', { useNewUrlParser: true })
+    .then(() => console.log('[OK] DB is connected'))
+    .catch(err => console.error(err));
 
 // Settings
 app.set('port', process.env.PORT || 3000);
@@ -40,11 +42,12 @@ app.use(express.urlencoded({extended: false}));
 app.use(morgan('dev'));
 
 // Routes
+app.use('/api/techs', require('./routes/techs'));
 // app.use('/api/tasks', require('./server/routes/tasks'));
 // app.use('/api/user', require('./server/routes/user'));
 
 app.use('/', express.static(path.join(__dirname, '../dist')));
-app.use('/login', express.static(path.join(__dirname, 'admin')));
+// app.use('/login', express.static(path.join(__dirname, 'admin')));
 
 app.get('/', (req, res) => {
     res.end('Express');
